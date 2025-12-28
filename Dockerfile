@@ -1,4 +1,9 @@
-FROM prefecthq/prefect:3-latest
+# Use minimal python3.12 image with UV installed
+FROM ghcr.io/astral-sh/uv:python3.12-alpine
+
+# Install dependencies
+COPY requirements.txt .
+RUN uv pip install -r requirements.txt
 
 # Expose Prefect UI port
 EXPOSE 4200

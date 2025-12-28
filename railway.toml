@@ -6,9 +6,8 @@ buildEnvironment = "V3"
 [deploy]
 runtime = "V2"
 numReplicas = 1
-startCommand = "prefect server start --host 0.0.0.0"
 sleepApplication = false
 useLegacyStacker = false
 multiRegionConfig = {"us-west2":{"numReplicas":1}}
 restartPolicyType = "ON_FAILURE"
-restartPolicyMaxRetries = 10
+restartPolicyMaxRetries = 5
