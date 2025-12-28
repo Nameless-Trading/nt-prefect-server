@@ -3,7 +3,7 @@ FROM ghcr.io/astral-sh/uv:python3.12-alpine
 
 # Install dependencies
 COPY requirements.txt .
-RUN uv pip install -r requirements.txt
+RUN uv pip install --system -r requirements.txt
 
 # Expose Prefect UI port
 EXPOSE 4200
