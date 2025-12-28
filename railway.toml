@@ -1,0 +1,6 @@
+[build]
+builder = "DOCKERFILE"
+dockerfilePath = "DockerFile"
+
+[deploy]
+startCommand = "prefect server start --host 0.0.0.0"
