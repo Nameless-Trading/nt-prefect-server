@@ -1,2 +1,2 @@
-prefect==3.6.23
+prefect==3.7.1
 asyncpg==0.31.0
