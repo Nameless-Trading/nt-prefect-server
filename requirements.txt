@@ -1,2 +1,8 @@
 prefect==3.7.1
 asyncpg==0.31.0
+# Pin FastAPI/Starlette: Prefect 3.7.1 only constrains fastapi<1.0.0,>=0.111.0, so an
+# unpinned rebuild drifted to fastapi 0.141.1 / starlette 1.6.0, which breaks Prefect's
+# PrefectRouter ("object has no attribute 'routes'") and 500s every API request. These are
+# the versions the last known-good image (2026-05-20) ran on.
+fastapi==0.136.1
+starlette==1.0.0
